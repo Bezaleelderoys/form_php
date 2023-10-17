@@ -28,8 +28,8 @@
             return $data;
         }
     ?>
-    <!-- <?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> -->
-        <form action="output.php" method="post" target="_blank">
+
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <h1><center>FORM</center></h1>
             <label style="margin-top: 0;">Nama :</label>
             <input type="text" name="nama"><br>
@@ -46,19 +46,21 @@
             <input type="submit" name="submit" value="Submit">
         </form>
 
-        <!-- <?php
-            echo "<h1>Hasil Inputan Kalian</h1>";
-            echo $nama;
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo $jnskelamin;
-            echo "<br>";
-            echo $alamat;
-            echo "<br>";
-            echo $cita;
-            echo "<br>";
-        ?> -->
+        <div class="hasil">
+            <?php
+                echo "<h1><center>HASIL</center></h1>";
+                echo "<label>Nama</label>";
+                echo "<p>".$nama."</p>";
+                echo "<label>Email</label>";
+                echo "<p>".$email."</p>";
+                echo "<label>Jenis Kelamin</label>";
+                echo "<p>".$jnskelamin."</p>";
+                echo "<label>Alamat</label>";
+                echo "<p>".$alamat."</p>";
+                echo "<label>Cita-cita</label>";
+                echo "<p>".$cita."</p>";
+            ?>
+        </div>
     </div>
 </body>
 </html>
